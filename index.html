@@ -1,2 +1,236 @@
-<h1>Hello World</h1>
-<p>Lorem Ipsum...</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Projet: Blog</title>
+
+        <style>
+
+         	body {
+                font-family: Helvetica;
+                background-color: WhiteSmoke;
+            }
+
+        	header {
+            	width: 60%;
+            	margin: 20px auto 10px auto;
+            }
+
+        	.sommaire {
+            	margin: 0 0 50px 100px;  
+            }
+            
+            li {
+                font-size: 0.90em;
+            }
+
+            h1 {
+            	text-align: center;
+            	color: darkred;
+            	background-color: white;
+            	font-weight: bold;
+            	border: 10px groove darkred;
+            	padding: 5px;
+            }
+
+            h2 {
+            	margin: 10px 0 10px 0;
+            }
+
+            h6 {
+            	font-style: italic;
+            	color: gray;
+            	margin: 0 0 30px 0;
+            }
+
+            a {
+        		text-decoration: none;
+        		font-weight: bold;
+        		color: darkred;
+        	}
+        	
+        	a:hover {
+        	    text-decoration: underline; 
+        	}
+
+            em {
+                font-style: normal;
+            }
+
+            img {
+				height: 100px;      
+            }
+
+            #img-css {
+            	float: left;
+            }
+
+            #img-html {
+            	float: right;
+            }
+
+            .article {
+            	border-width: 5px;
+            	border-color: black;
+            	border-style: groove solid solid groove;
+            	width: 60%;
+            	margin: 0 auto 75px auto;
+            	padding: 20px 20px 20px 20px;
+            	background-color: white;
+            }
+
+        	table {
+        		border-collapse: collapse;
+        		width: 100%;
+        	}
+
+        	table, th, td {
+        		border: 1px solid black;
+        		padding: 2px 5px 2px 5px;
+        	}
+
+        	th {
+        		background-image: linear-gradient(to right, darkred, brown);
+        		color: white;
+        		text-decoration: underline;
+        		text-align: left;
+        	}
+
+            #serif {
+                font-family: serif;
+            }
+
+            #monospace {
+                font-family: monospace;
+            }
+
+            #small {
+                font-size: 1em;
+            }
+
+            #medium {
+                font-size: 1.5em;
+            }
+
+            #big {
+                font-size: 2em;
+            }
+
+            #italic {
+                font-style: italic;
+            }
+
+            #bold {
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+    		<h1>Blog de Gwenaël</h1>
+	        <img id="img-html" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/180px-HTML5_logo_and_wordmark.svg.png" alt="Logo HTML">
+	        <img id="img-css" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/180px-CSS3_logo_and_wordmark.svg.png" alt="Logo CSS">
+
+	        <div class="sommaire">
+		        <h3>Sommaire :</h3>
+		        <ul>
+		            <li><a href="#htmlcss-1">HTML/CSS partie 1</a></li>
+		            <li><a href="#htmlcss-2">HTML/CSS partie 2</a></li>
+		        </ul>
+		    </div>
+	        
+		</header>
+		<div class="article">
+		    <h2 id="htmlcss-1">HTML/CSS partie 1</h2>
+		    <h6>Posté le 1.12.2020</h6>
+		    
+		    <p>J'ai commencer à réellement coder en HTML et en CSS. Avec l'aide de <a href="https://www.khanacademy.org/" class="kahn-academy" target="blank">Kahn Academy</a>, et au travers de différents exercices et vidéos, J'ai appris les balises HTML et les Selecteur et Propriété CSS.</p>
+
+		    <h3>Exemple de quelques balises importantes de HTML :</h3>
+		    <table>
+		        <thead>
+		            <tr>
+		                <th>Balise</th>
+		                <th>Utilité</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <tr>
+		                <td>h1 à h6</td>
+		                <td>Titre avec plusieurs niveaux (de 1 à 6)</td>
+		            </tr>
+		            <tr>
+		                <td>p</td>
+		                <td>Paragraphe</td>
+		            </tr>
+		            <tr>
+		                <td>strong</td>
+		                <td>Mettre un texte en évidence</td>
+		            </tr>
+		            <tr>
+		                <td>em</td>
+		                <td>Diminuer l'importance d'un texte</td>
+		            </tr>
+		            <tr>
+		                <td>img</td>
+		                <td>Insérer une image</td>
+		            </tr>
+		            <tr>
+		                <td>ul</td>
+		                <td>Liste a puce</td>
+		            </tr>
+		            <tr>
+		                <td>ol</td>
+		                <td>Liste numéroté</td>
+		            </tr>
+		            <tr>
+		                <td>li</td>
+		                <td>Élément d'une liste</td>
+		            </tr>
+		        </tbody>
+		    </table>
+		</div>
+
+
+		<div class="article">
+	        <h2 id="htmlcss-2">HTML/CSS partie 2</h2>
+	        <h6>Posté le 8.12.2020</h6>
+	        
+	        <p>Après un bref rafraichissement des notions de <em>balise</em>, de <em>Selecteurs</em> et de <em>Propriétés</em>, J'ai continuer les exercices dans <a href="https://www.khanacademy.org/" class="kahn-academy" target="blank">Kahn Academy</a>. J'ai vu les liens <em>(balise a )</em> et les propriétés liées au texte.</p>
+
+	        <h3>Exemple de quelques propriétés CSS liées au texte :</h3>
+	        <table>
+	            <thead>
+	                <tr>
+	                    <th>Propriété</th>
+	                    <th>Utilité</th>
+	                    <th>Exemple</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <tr>
+	                    <td>font-family</td>
+	                    <td>Définir la police du texte</td>
+	                    <td><em id="serif">Serif</em> / <em id="monospace">Monospace</em></td>
+	                </tr>
+	                <tr>
+	                    <td>font-size</td>
+	                    <td>Définir la taille du texte [em]</td>
+	                    <td><em id="small">1 em</em> / <em id="medium">1,5 em</em> <em id="big">2 em</em></td>
+	                </tr>
+	                 <tr>
+	                    <td>font-style</td>
+	                    <td>Définir le "design" du texte (italique)</td>
+	                    <td>Normal / <em id="italic">italic</em></td>
+	                </tr>
+	                <tr>
+	                    <td>font-weight</td>
+	                    <td>Définir le "poids" du texte (gras)</td>
+	                    <td>Normal / <em id="bold">Bold</em></td>
+	                </tr>
+	            </tbody> 
+	        </table>
+	    </div>
+    </body>
+</html>
