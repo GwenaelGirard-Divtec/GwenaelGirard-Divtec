@@ -12,10 +12,11 @@
             }
 
             h1 {
+                font-size: 2.5em;
                 background-color: white;
                 text-align: center;
                 border: 10px groove darkred;
-                width: 60%;
+                width: 80%;
                 margin: 10px auto 20px auto;
                 padding: 10px;
             }
@@ -37,9 +38,9 @@
 
             nav h3 {
                 line-height: 1px;
-                margin: 20px 0 15px 0;
+                margin: 20px 0 25px 0;
                 text-decoration: underline;
-                font-size: 1.5em;
+                font-size: 2em;
             }
 
             .menu {
@@ -50,21 +51,26 @@
             }
 
             .menu li{
-                line-height: 30px;
+                line-height: 20px;
             }
 
-            .menu li a {
-                text-decoration: none;
+            .animation-scale {
+                width: 60%;
+                height: 50%;
+                margin: 10px auto 5px auto;
+                padding: 3px;
                 background-color: darkred;
                 color: white;
-                padding: 3px;
-
-                transition-duration: 0.2s;
+                border: 5px groove firebrick;
+                
+                transition-duration: 0.3s;
             }
 
-            .menu li a:hover {
-                padding: 4px;
+            .animation-scale:hover {
+                text-decoration: none;
+                transform: scale(1.1);
                 background-color: firebrick;
+                border: 5px groove darkred;
             }
 
             main {
@@ -186,8 +192,8 @@
             <nav>
                 <h3>Sommaire</h3>
                 <ul class="menu">
-                    <li><a href="#htmlcss-1">HTML/CSS partie 1</a></li>
-                    <li><a href="#htmlcss-2">HTML/CSS partie 2</a></li>
+                    <li><a href="#htmlcss-1"><div class="animation-scale">HTML/CSS partie 1</div></a></li>
+                    <li><a href="#htmlcss-2"><div class="animation-scale">HTML/CSS partie 2</div></a></li>
                 </ul>
             </nav>
 
