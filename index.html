@@ -1,319 +1,327 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Module 101</title>
+<html lang="fr-CH">
+<head>
+    <meta charset="utf-8">
+    <title>Module 101</title>
 
-        <style>
-            body {
-                font-family: Helvetica;
-                background-color: WhiteSmoke;
-                padding: 0;
-            }
+    <style>
+        body {
+            font-family: Helvetica,sans-serif;
+            background-color: WhiteSmoke;
+            padding: 0;
+        }
 
-            h1 {
-                font-size: 2.5em;
-                color: white;
-                background-color: firebrick;
-                text-align: center;
-                border: 10px groove darkred;
-                width: 80%;
-                margin: 10px auto 20px auto;
-                padding: 10px;
-            }
+        h1 {
+            font-size: 2.5em;
+            color: white;
+            background-color: firebrick;
+            text-align: center;
+            border: 10px groove darkred;
+            width: 80%;
+            position: fixed;
+            left: 10%;
+            right: 10%;
 
-            header {
-                display: flex;
-                justify-content: center;
-            }
+            z-index: 1;
+            margin: 5px auto 20px auto;
+            padding: 10px;
 
-            nav {
-                width: 30%;
-                text-align: center;
-            }
+            box-shadow: 0 0 10px black, 0 -15px WhiteSmoke;
+        }
 
-            img {
-                height: 100px;
-                display: block;
-            }
+        header {
+            display: flex;
+            justify-content: center;
+            padding-top: 130px
+        }
 
-            nav h3 {
-                line-height: 1px;
-                margin: 20px 0 25px 0;
-                text-decoration: underline;
-                font-size: 2em;
-            }
+        nav {
+            width: 30%;
+            text-align: center;
+        }
 
-            .menu {
-                list-style-type: none;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
+        img {
+            height: 100px;
+            display: block;
+        }
 
-            .menu li{
-                line-height: 20px;
-            }
+        nav h3 {
+            line-height: 1px;
+            margin: 20px 0 25px 0;
+            text-decoration: underline;
+            font-size: 2em;
+        }
 
-            .animation-scale {
-                width: 60%;
-                height: 50%;
-                margin: 10px auto 5px auto;
-                padding: 3px;
-                background-color: darkred;
-                color: white;
-                border: 5px groove firebrick;
-                
-                transition-duration: 0.3s;
-            }
+        .menu {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
-            .animation-scale:hover {
-                text-decoration: none;
-                transform: scale(1.1);
-                background-color: firebrick;
-                border: 5px groove darkred;
-            }
+        .menu li{
+            line-height: 20px;
+        }
 
-            main {
-                width: 60%;
-                margin: auto;
-            }
+        .animation-scale {
+            width: 60%;
+            height: 50%;
+            margin: 10px auto 5px auto;
+            padding: 3px;
+            background-color: darkred;
+            color: white;
+            border: 5px groove firebrick;
 
-            article {
-                background-color: white;
-                margin: 20px 0 100px 0;
-                padding: 15px;
-                border: 7px groove darkred;
+            transition-duration: 0.3s;
+        }
 
-                transition-duration: 0.5s;
-            }
+        .animation-scale:hover {
+            text-decoration: none;
+            transform: scale(1.1);
+            background-color: firebrick;
+            border: 5px groove darkred;
+        }
 
-            article:hover {
-                transform: scale(1.05);
-                border: 10px groove darkred;
-                box-shadow: 0 10px 10px gray;
-            }
+        main {
+            width: 60%;
+            margin: auto;
+        }
 
-            article h2 {
-                margin-bottom: 5px
-            }
+        article {
+            background-color: white;
+            margin: 20px 0 100px 0;
+            padding: 15px;
+            border: 7px groove darkred;
 
-            h5 {
-                margin-top: 5px;
-                font-style: italic;
-                color: darkgray;
-            }
+            transition-duration: 0.5s;
+        }
 
-            a {
-                text-decoration: none;
-                font-weight: bold;
-                color: darkred;
-            }
+        article:hover {
+            transform: scale(1.05);
+            border: 10px groove darkred;
+            box-shadow: 0 10px 10px gray;
+        }
 
-            a:hover {
-                text-decoration: underline;
-            }
+        article h2 {
+            margin-bottom: 5px
+        }
 
-            table {
-                border-collapse: collapse;
-                width: 100%;
+        h5 {
+            margin-top: 5px;
+            font-style: italic;
+            color: darkgray;
+        }
 
-                transition-duration: 0.7s;
-            }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: darkred;
+        }
 
-            table:hover {
-                transform: scale(1.02);
-                box-shadow: 0 5px 5px gray;
-            }
+        a:hover {
+            text-decoration: underline;
+        }
 
-            thead {
-                background-image: linear-gradient(darkred, firebrick);
-            }
+        table {
+            border-collapse: collapse;
+            width: 100%;
 
-            th, td {
-                border: 2px solid black;
-                padding: 2px;
-            }
+            transition-duration: 0.7s;
+        }
 
-            th {
-                text-align: left;
-                color: white;
-            }
+        table:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 5px gray;
+        }
+
+        thead {
+            background-image: linear-gradient(darkred, firebrick);
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 2px;
+        }
+
+        th {
+            text-align: left;
+            color: white;
+        }
 
 
-            #serif {
-                font-family: serif;
-            }
+        #serif {
+            font-family: serif;
+        }
 
-            #monospace {
-                font-family: monospace;
-            }
+        #monospace {
+            font-family: monospace;
+        }
 
-            #small {
-                font-size: 1em;
-            }
+        #small {
+            font-size: 1em;
+        }
 
-            #medium {
-                font-size: 1.5em;
-            }
+        #medium {
+            font-size: 1.5em;
+        }
 
-            #big {
-                font-size: 2em;
-            }
+        #big {
+            font-size: 2em;
+        }
 
-            #italic {
-                font-style: italic;
-            }
+        #italic {
+            font-style: italic;
+        }
 
-            #bold {
-                font-weight: bold;
-            }
+        #bold {
+            font-weight: bold;
+        }
 
-            h6 {
-                text-align: right;
-                margin: 10px;
-                font-style: italic;
-            }
+        h6 {
+            text-align: right;
+            margin: 10px;
+            font-style: italic;
+        }
 
-            footer {
-                background-color: darkred;
-                border-top: 10px groove firebrick;
-                position: absolute;
-                left: 0; right: 0;
-                height: auto;
-                width: 100%;
-                padding-top: 10px;
-            }
+        footer {
+            background-color: darkred;
+            border-top: 10px groove firebrick;
+            position: absolute;
+            left: 0; right: 0;
+            height: auto;
+            width: 100%;
+            padding-top: 10px;
+        }
 
-            footer h5 {
-                color: whitesmoke;
-                text-align: left;
-                margin-left: 10px;
-            }
+        footer h5 {
+            color: whitesmoke;
+            text-align: left;
+            margin-left: 10px;
+        }
 
-            footer p {
-                color: white;
-                text-align: right;
-                margin-right: 10px;
-            }
+        footer p {
+            color: white;
+            text-align: right;
+            margin-right: 10px;
+        }
 
-        </style>
-    </head>
-    <body>
+    </style>
+</head>
+<body>
 
-        <h1>Module 101 (HTML - CSS)</h1>
-        <header>
+<h1>Module 101 (HTML - CSS)</h1>
+<header>
 
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F61%2FHTML5_logo_and_wordmark.svg%2F200px-HTML5_logo_and_wordmark.svg.png&f=1&nofb=1" alt="Logo HTML">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F61%2FHTML5_logo_and_wordmark.svg%2F200px-HTML5_logo_and_wordmark.svg.png&f=1&nofb=1" alt="Logo HTML">
 
-            <nav>
-                <h3>Sommaire</h3>
-                <ul class="menu">
-                    <li><a href="#htmlcss-1"><div class="animation-scale">HTML/CSS partie 1</div></a></li>
-                    <li><a href="#htmlcss-2"><div class="animation-scale">HTML/CSS partie 2</div></a></li>
-                </ul>
-            </nav>
+    <nav>
+        <h3>Sommaire</h3>
+        <ul class="menu">
+            <li><a href="#htmlcss-1"><div class="animation-scale">HTML/CSS partie 1</div></a></li>
+            <li><a href="#htmlcss-2"><div class="animation-scale">HTML/CSS partie 2</div></a></li>
+        </ul>
+    </nav>
 
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fluminfire.com%2Fwp-content%2Fuploads%2F2017%2F12%2FCSS_Logo.png&f=1&nofb=1" alt="Logo CSS">
-            
-        </header>
-        <main>
-            <article class="article 1" id="htmlcss-1">
-                <h2>HTML/CSS partie 1</h2>
-                <h5>Posté le 1.12.2020</h5>
-                
-                <p>J'ai commencer à réellement coder en HTML et en CSS. Avec l'aide de <a href="https://www.khanacademy.org/" class="kahn-academy" target="blank">Kahn Academy</a>, et au travers de différents exercices et vidéos, J'ai appris les <strong>balises HTML</strong> et les <strong>selecteur</strong> et <strong>propriété</strong> CSS.</p>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fluminfire.com%2Fwp-content%2Fuploads%2F2017%2F12%2FCSS_Logo.png&f=1&nofb=1" alt="Logo CSS">
 
-                <h3>Exemple de quelques balises importantes de HTML :</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Balise</th>
-                            <th>Utilité</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>h1 à h6</td>
-                            <td>Titre avec plusieurs niveaux (de 1 à 6)</td>
-                        </tr>
-                        <tr>
-                            <td>p</td>
-                            <td>Paragraphe</td>
-                        </tr>
-                        <tr>
-                            <td>strong</td>
-                            <td>Mettre un texte en évidence</td>
-                        </tr>
-                        <tr>
-                            <td>span</td>
-                            <td>Diminuer l'importance d'un texte</td>
-                        </tr>
-                        <tr>
-                            <td>img</td>
-                            <td>Insérer une image</td>
-                        </tr>
-                        <tr>
-                            <td>ul</td>
-                            <td>Liste a puce</td>
-                        </tr>
-                        <tr>
-                            <td>ol</td>
-                            <td>Liste numéroté</td>
-                        </tr>
-                        <tr>
-                            <td>li</td>
-                            <td>Élément d'une liste</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h6>Auteur : Gwenaël Girard</h6>
-            </article>
+</header>
+<main>
+    <article class="article 1" id="htmlcss-1">
+        <h2>HTML/CSS partie 1</h2>
+        <h5>Posté le 1.12.2020</h5>
 
-            <article class="article2" id="htmlcss-2">
-                <h2>HTML/CSS partie 2</h2>
-                <h5>Posté le 8.12.2020</h5>
-                
-                <p>Après un bref rafraichissement des notions de <strong>balise</strong>, de <strong>selecteurs</strong> et de <strong>propriétés</strong>, J'ai continuer les exercices dans <a href="https://www.khanacademy.org/" class="kahn-academy" target="blank">Kahn Academy</a>. J'ai vu les liens <span>(balise a )</span> et les propriétés liées au texte.</p>
+        <p>J'ai commencer à réellement coder en HTML et en CSS. Avec l'aide de <a href="https://www.khanacademy.org/" class="kahn-academy" target="blank">Kahn Academy</a>, et au travers de différents exercices et vidéos, J'ai appris les <strong>balises HTML</strong> et les <strong>selecteur</strong> et <strong>propriété</strong> CSS.</p>
 
-                <h3>Exspanple de quelques propriétés CSS liées au texte :</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Propriété</th>
-                            <th>Utilité</th>
-                            <th>Exemple</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>font-family</td>
-                            <td>Définir la police du texte</td>
-                            <td><span id="serif">Serif</span> / <span id="monospace">Monospace</span></td>
-                        </tr>
-                        <tr>
-                            <td>font-size</td>
-                            <td>Définir la taille du texte [em]</td>
-                            <td><span id="small">1 em</span> / <span id="medium">1,5 em</span> / <span id="big">2 em</span></td>
-                        </tr>
-                         <tr>
-                            <td>font-style</td>
-                            <td>Définir le "design" du texte (italique)</td>
-                            <td>Normal / <span id="italic">italic</span></td>
-                        </tr>
-                        <tr>
-                            <td>font-weight</td>
-                            <td>Définir le "poids" du texte (gras)</td>
-                            <td>Normal / <span id="bold">Bold</span></td>
-                        </tr>
-                    </tbody> 
-                </table>
-                <h6>Auteur : Gwenaël Girard</h6>
-            </article>
-        </main>
-        
-        <footer>
-            <h5>Module 101 (HTML - CSS)</h5>
-            <p>INF1B 2020-2021</p>
-        </footer>
-    </body>
+        <h3>Exemple de quelques balises importantes de HTML :</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Balises</th>
+                <th>Utilité</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>h1 à h6</td>
+                <td>Titre avec plusieurs niveaux (de 1 à 6)</td>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>Paragraphe</td>
+            </tr>
+            <tr>
+                <td>strong</td>
+                <td>Mettre un texte en évidence</td>
+            </tr>
+            <tr>
+                <td>span</td>
+                <td>Diminuer l'importance d'un texte</td>
+            </tr>
+            <tr>
+                <td>img</td>
+                <td>Insérer une image</td>
+            </tr>
+            <tr>
+                <td>ul</td>
+                <td>Liste a puce</td>
+            </tr>
+            <tr>
+                <td>ol</td>
+                <td>Liste numéroté</td>
+            </tr>
+            <tr>
+                <td>li</td>
+                <td>Élément d'une liste</td>
+            </tr>
+            </tbody>
+        </table>
+        <h6>Auteur : Gwenaël Girard</h6>
+    </article>
+
+    <article class="article2" id="htmlcss-2">
+        <h2>HTML/CSS partie 2</h2>
+        <h5>Posté le 8.12.2020</h5>
+
+        <p>Après un bref rafraichissement des notions de <strong>balise</strong>, de <strong>selecteurs</strong> et de <strong>propriétés</strong>, J'ai continuer les exercices dans <a href="https://www.khanacademy.org/" class="kahn-academy" target="blank">Kahn Academy</a>. J'ai vu les liens <span>(balise a )</span> et les propriétés liées au texte.</p>
+
+        <h3>Exspanple de quelques propriétés CSS liées au texte :</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Propriété</th>
+                <th>Utilité</th>
+                <th>Exemple</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>font-family</td>
+                <td>Définir la police du texte</td>
+                <td><span id="serif">Serif</span> / <span id="monospace">Monospace</span></td>
+            </tr>
+            <tr>
+                <td>font-size</td>
+                <td>Définir la taille du texte [em]</td>
+                <td><span id="small">1 em</span> / <span id="medium">1,5 em</span> / <span id="big">2 em</span></td>
+            </tr>
+            <tr>
+                <td>font-style</td>
+                <td>Définir le "design" du texte (italique)</td>
+                <td>Normal / <span id="italic">italic</span></td>
+            </tr>
+            <tr>
+                <td>font-weight</td>
+                <td>Définir le "poids" du texte (gras)</td>
+                <td>Normal / <span id="bold">Bold</span></td>
+            </tr>
+            </tbody>
+        </table>
+        <h6>Auteur : Gwenaël Girard</h6>
+    </article>
+</main>
+
+<footer>
+    <h5>Module 101 (HTML - CSS)</h5>
+    <p>INF1B 2020-2021</p>
+</footer>
+</body>
