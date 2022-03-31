@@ -1,4 +1,4 @@
-<h1 align="center">Gwenael's GitHub 🖖</h1>
+<h1 align="center">Gwenael's GitHub</h1>
 <h3 align="center">IT student - Divtec</h3>
 
 <div align="center">
